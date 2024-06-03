@@ -83,7 +83,7 @@ async def startprivate(client, message):
 async def start(c, m):
 
     # start text
-    text = f"""<b>♻️ ᴍʏ ɴᴀᴍᴇ : [FontStyleTB_bot] (https://t.me/saveybot_bot)
+    text = f"""<b>♻️ ᴍʏ ɴᴀᴍᴇ : <a href="https://t.me/saveybot_bot">FontStyleTB_bot</a>
 
 🌀 ᴄʜᴀɴɴᴇʟ : <a href="https://t.me/MOVIE_Time_BotOnly">​🇹​​🇷​​🇺​​🇲​​🇧​​🇴​​🇹​​🇸</a>
 
