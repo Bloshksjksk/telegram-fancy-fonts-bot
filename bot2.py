@@ -79,8 +79,8 @@ async def startprivate(client, message):
                 reply_markup=InlineKeyboardMarkup(buttons)
         )    
      
-@Client.on_message(filters.command('about'))
-async def start(c, m):
+@app.on_message(filters.command('about'))
+async def start(client, message):
 
     # start text
     text = f"""<b>♻️ ᴍʏ ɴᴀᴍᴇ : <a href="https://t.me/saveybot_bot">FontStyleTB_bot</a>
@@ -113,7 +113,7 @@ async def start(c, m):
     )
 
 @Client.on_message(filters.private & filters.incoming & filters.text)
-async def no_txt(c, m):
+async def no_txt(client, message):
         await m.answer()
         await m.send_message("Use Me one Only Inline Mode <code>@FontStyle_TB_Bot</code> jUST cOPY AND pASTE It any Chat😀")
 
