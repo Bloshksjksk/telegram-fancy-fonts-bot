@@ -79,7 +79,42 @@ async def startprivate(client, message):
                 reply_markup=InlineKeyboardMarkup(buttons)
         )    
      
-  
+@Client.on_message(filters.command('about'))
+async def start(c, m):
+
+    # start text
+    text = f"""<b>♻️ ᴍʏ ɴᴀᴍᴇ : [FontStyleTB_bot] (https://t.me/saveybot_bot)
+
+🌀 ᴄʜᴀɴɴᴇʟ : <a href="https://t.me/MOVIE_Time_BotOnly">​🇹​​🇷​​🇺​​🇲​​🇧​​🇴​​🇹​​🇸</a>
+
+🌺 ʜᴇʀᴏᴋᴜ : <a href="https://heroku.com/">ʜᴇʀᴏᴋᴜ</a>
+
+📑 ʟᴀɴɢᴜᴀɢᴇ : <a href="https://www.python.org/">ᴘʏᴛʜᴏɴ 3.10.5</a>
+
+🇵🇲 ғʀᴀᴍᴇᴡᴏʀᴋ : <a href="https://docs.pyrogram.org/">ᴘʏʀᴏɢʀᴀᴍ 2.0.30</a>
+
+👲 ᴅᴇᴠᴇʟᴏᴘᴇʀ : <a href="https://t.me/fligher">​🇲​​🇾​​🇸​​🇹​​🇪​​🇷​​🇮​​🇴​</a></b>
+"""
+
+    # Buttons
+    buttons = [
+        [
+            InlineKeyboardButton('👥 Group', url=f"https://t.me/trumbotchat"),
+            InlineKeyboardButton('TRUMBOTS', url=f"https://t.me/movie_time_botonly")
+            ],[
+            InlineKeyboardButton('❤️Me', url=f"https://t.me/fligher"),
+            InlineKeyboardButton('Bot Lists 🤖', url=f"https://te.legra.ph/TRUMBOTS-BOTS-LIST-06-01"),
+            ]
+    ]
+    await m.reply_photo(
+        photo="https://th.bing.com/th/id/OIG4.kIKwAP6q4rN21rOhb71Z?pid=ImgGn",
+        caption=text,
+        reply_markup=InlineKeyboardMarkup(buttons)
+    )
+
+
+
+
 @app.on_message(filters.command("settings"))
 async def opensettings(bot, cmd):
     user_id = cmd.from_user.id
