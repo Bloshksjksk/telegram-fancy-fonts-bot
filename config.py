@@ -7,7 +7,7 @@ BROADCAST_AS_COPY = bool(os.environ.get("BROADCAST_AS_COPY", False))
 
 class Config(object):
 
-      BOT_TOKEN = os.environ.get("BOT_TOKEN", "5576425861:AAHsmfakmMyZtvSxEuRNpN4LWynLiDGKGUM")
+      BOT_TOKEN = os.environ.get("BOT_TOKEN", "7265214230:AAEPskDnHIu30z--agLhUBtXl1eVThnpKtc")
       API_ID = int(os.environ.get("API_ID", 4682685))
       API_HASH = os.environ.get("API_HASH","3eba5d471162181b8a3f7f5c0a23c307")
       OWNER_ID = os.environ.get("OWNER_ID","945284066")
