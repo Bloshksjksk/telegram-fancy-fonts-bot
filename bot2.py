@@ -106,7 +106,7 @@ async def start(client, message):
             InlineKeyboardButton('Bot Lists 🤖', url=f"https://te.legra.ph/TRUMBOTS-BOTS-LIST-06-01"),
             ]
     ]
-    await m.reply_photo(
+    await message.reply_photo(
         photo="https://th.bing.com/th/id/OIG4.kIKwAP6q4rN21rOhb71Z?pid=ImgGn",
         caption=text,
         reply_markup=InlineKeyboardMarkup(buttons)
@@ -114,8 +114,8 @@ async def start(client, message):
 
 @Client.on_message(filters.private & filters.incoming & filters.text)
 async def no_txt(client, message):
-        await m.answer()
-        await m.send_message("Use Me one Only Inline Mode <code>@FontStyle_TB_Bot</code> jUST cOPY AND pASTE It any Chat😀")
+        await message.answer()
+        await message.reply_text("Use Me one Only Inline Mode <code>@FontStyle_TB_Bot</code> jUST cOPY AND pASTE It any Chat and Give YoUr TeXt😀")
 
 
 @app.on_message(filters.command("settings"))
