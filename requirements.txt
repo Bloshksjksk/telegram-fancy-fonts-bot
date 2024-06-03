@@ -1,1 +1,7 @@
 python-telegram-bot==13.1
+pyrogram
+tgcrypto
+aiofiles
+motor
+dnspython
+asyncio
