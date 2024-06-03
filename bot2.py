@@ -64,7 +64,7 @@ async def startprivate(client, message):
         else:
             logging.info(f"#NewUser :- Name : {message.from_user.first_name} ID : {message.from_user.id} TIme : {current_time}")
 
-    welcome_message = f"Hey! {message.from_user.mention},\n\nI am Stylish Font Bot ✍️\n\nI can help you to get stylish fonts. Just send me some text and see magic.\n\nDeveloper by : ❤️ ▷ [TRUMBOTS](https://t.me/movie_time_botonly)"
+    welcome_message = f"Hey! {message.from_user.mention},\n\nI am Stylish Font Bot ✍️\n\nI can help you to get stylish fonts. I am using Inline @FontStyle_TB_Bot so you can use me in every chat .\n\nDeveloper by : ❤️ ▷ [TRUMBOTS](https://t.me/movie_time_botonly)"
     buttons = [ [
             InlineKeyboardButton('👥 Group', url=f"https://t.me/trumbotchat"),
             InlineKeyboardButton('TRUMBOTS', url=f"https://t.me/movie_time_botonly")
@@ -112,7 +112,10 @@ async def start(c, m):
         reply_markup=InlineKeyboardMarkup(buttons)
     )
 
-
+@Client.on_message(filters.private & filters.incoming & filters.text)
+async def no_txt(c, m):
+        await m.answer()
+        await m.send_message("Use Me one Only Inline Mode <code>@FontStyle_TB_Bot</code> jUST cOPY AND pASTE It any Chat😀")
 
 
 @app.on_message(filters.command("settings"))
