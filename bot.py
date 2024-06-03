@@ -56,39 +56,6 @@ updater = Updater(token = CONFIG['botToken'])
 dispatcher = updater.dispatcher
 
 ## Commands.
-def c_start(update: Update, ctx: CallbackContext) -> None:
-	"""General info about the bot and command help."""
-
-	text = (
-		"Hello there! 👋🏻 "
-		"\n\nI'm a bot that can help you write messages in cool looking, weird (and beautiful) unicode fonts!\n",
-		
-		"\n\You can use me by mentioning me @FontStyle_TB_Bot in any chat and typing your message. A list of fonts will appear which you can choose from."
-	)
-
-	#ctx.bot.send_message(chat_id = update.effective_chat.id, text = escape_markdown('\n'.join(text), 2), parse_mode = ParseMode.MARKDOWN_V2)
-	context.bot.send_photo(chat_id=update.effective_chat.id, photo="https://th.bing.com/th/id/OIG4.iV2l1_HaysKkHZXO8DlJ?pid=ImgGn", caption=text,parse_mode = ParseMode.MARKDOWN_V2)
-
-def a_start(update: Update, ctx: CallbackContext) -> None:
-	"""General info about the bot and command help."""
-
-	text = (
-		"""<b>♻️ ᴍʏ ɴᴀᴍᴇ : <a href="https://t.me/FontStyle_TB_Bot">FontStyle_TB_bot</a>
-
-🌀 ᴄʜᴀɴɴᴇʟ : <a href="https://t.me/MOVIE_Time_BotOnly">​🇹​​🇷​​🇺​​🇲​​🇧​​🇴​​🇹​​🇸</a>
-
-🌺 ʜᴇʀᴏᴋᴜ : <a href="https://heroku.com/">ʜᴇʀᴏᴋᴜ</a>
-
-📑 ʟᴀɴɢᴜᴀɢᴇ : <a href="https://www.python.org/">ᴘʏᴛʜᴏɴ 3.10.5</a>
-
-🇵🇲 ғʀᴀᴍᴇᴡᴏʀᴋ : <a href="https://docs.pyrogram.org/">ᴘʏʀᴏɢʀᴀᴍ 2.0.30</a>
-
-👲 ᴅᴇᴠᴇʟᴏᴘᴇʀ : <a href="https://t.me/fligher">​🇲​​🇾​​🇸​​🇹​​🇪​​🇷​​🇮​​🇴​</a></b>
-"""
-	)
-
-	#ctx.bot.send_message(chat_id = update.effective_chat.id, text = escape_markdown('\n'.join(text), 2), parse_mode = ParseMode.MARKDOWN_V2)
-	context.bot.send_photo(chat_id=update.effective_chat.id, photo="https://th.bing.com/th/id/OIG4.iV2l1_HaysKkHZXO8DlJ?pid=ImgGn", caption=text,parse_mode = ParseMode.MARKDOWN_V2)
 
 def inlinequery(update: Update, context: CallbackContext) -> None:
 	query = update.inline_query.query.strip()
@@ -110,8 +77,8 @@ def inlinequery(update: Update, context: CallbackContext) -> None:
 ## Command Handler.
 print("[Set-Up] Adding handlers..")
 # -- Command Handler -- 
-dispatcher.add_handler(CommandHandler(('start', 'help'), c_start))
-dispatcher.add_handler(CommandHandler(('about'), a_start))
+#dispatcher.add_handler(CommandHandler(('start', 'help'), c_start))
+#dispatcher.add_handler(CommandHandler(('about'), a_start))
 
 # -- Inline Query Handler --
 dispatcher.add_handler(InlineQueryHandler(inlinequery))
