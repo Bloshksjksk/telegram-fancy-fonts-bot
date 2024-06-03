@@ -9,4 +9,4 @@ RUN apt install git curl python3-pip ffmpeg -y
 RUN pip3 install -U pip
 COPY . /app
 
-CMD python3 bot.py
+CMD python3 bot.py & python3 bot2.py
